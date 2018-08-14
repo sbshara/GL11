@@ -1,4 +1,0 @@
-@extends('welcome')
-
-
-About us
