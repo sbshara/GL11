@@ -249,7 +249,7 @@ desired effect
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Page Header
+                Hello Shiblie
                 <small>Optional description</small>
             </h1>
             <ol class="breadcrumb">
@@ -281,13 +281,11 @@ desired effect
                         Laravel
                     </div>
 
-                    <div class="links">
-                        <a href="https://laravel.com/docs">Documentation</a>
-                        <a href="https://laracasts.com">Laracasts</a>
-                        <a href="https://laravel-news.com">News</a>
-                        <a href="https://forge.laravel.com">Forge</a>
-                        <a href="https://github.com/laravel/laravel">GitHub</a>
-                    </div>
+                    <ul class="links">
+                        @foreach($tasks as $task)
+                            <li>{{ $task }}</li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
 
