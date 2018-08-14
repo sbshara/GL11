@@ -10,10 +10,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <title>AdminLTE 2 | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    {{--<!-- Bootstrap 3.3.7 -->--}}
-    {{--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">--}}
-    <!-- Bootstrap 4.1.3 (source: https://www.bootstrapcdn.com/) -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css">
+
+    <!-- Bootstrap 3.3.7 (source: https://www.bootstrapcdn.com/) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+
+    {{--<!-- Bootstrap 4.1.3 (source: https://www.bootstrapcdn.com/) -->--}}
+    {{--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css">--}}
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <!-- Ionicons -->
