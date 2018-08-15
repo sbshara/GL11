@@ -11,6 +11,8 @@
 |
 */
 
+use App\Task;
+
 Route::get('/', function () {
     return view('staticPages.starter');
 });
@@ -25,14 +27,17 @@ Route::get('/about', function () {
 // All Tasks
 Route::get('/tasks', function () {
 
-    $tasks = DB::table('tasks')->get();
+//    $tasks = DB::table('tasks')->get();
+    $tasks = Task::all();
+
 
     return view('tasks.tasks', compact('tasks'));
 });
 
 // Task by ID
 Route::get('/tasks/{task}', function ($id) {
-    $task = DB::table('tasks')->find($id);
+//    $task = DB::table('tasks')->find($id);
+    $task = Task::find($id);
     return view('tasks.task', compact('task'));
 });
 
