@@ -40,7 +40,7 @@
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>--}}
 
 <!-- AdminLTE App -->
-<script src="js/adminlte.min.js"></script>
+<script src="{{ url('/') }}/js/adminlte.min.js"></script>
 </body>
 </html>
 

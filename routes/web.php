@@ -12,20 +12,37 @@
 */
 
 Route::get('/', function () {
-
-    $tasks = [
-        'Go to the store',
-        'Collect mail',
-        'Visit family'
-    ];
-
-
-    return view('starter', compact('tasks'));
+    return view('staticPages.starter');
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('staticPages.about');
 });
+
+
+
+
+// All Tasks
+Route::get('/tasks', function () {
+
+    $tasks = DB::table('tasks')->get();
+
+    return view('tasks.tasks', compact('tasks'));
+});
+
+// Task by ID
+Route::get('/tasks/{task}', function ($id) {
+    $task = DB::table('tasks')->find($id);
+    return view('tasks.task', compact('task'));
+});
+
+
+
+
+
+
+
+
 
 
 

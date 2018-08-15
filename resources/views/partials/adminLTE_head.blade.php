@@ -22,10 +22,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.3.0/css/ionicons.min.css" type="text/css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{ url('/') }}/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="{{ url('/') }}/css/skins/_all-skins.min.css">
     <!-- Morris chart -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css" type="text/css">
     <!-- jvectormap -->
@@ -50,4 +50,3 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-</head>
