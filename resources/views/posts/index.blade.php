@@ -1,5 +1,4 @@
 @extends('layout')
-@section('title') MENA Technologies | Home @endsection
 @section('content')
 
         <!-- Content Wrapper. Contains page content -->
@@ -8,15 +7,14 @@
     <section class="content-header">
         <h1>
             Hello Shiblie
-            <small>Task by ID</small>
+            <small>This is the "Home" Page</small>
         </h1>
 
 
         <!-- Page Mapper -->
         <ol class="breadcrumb">
-            <li><a href="{{ url('/') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="{{ url('/tasks')  }}"></i> Tasks</a></li>
-            <li class="active">{{ $task->id  }}</li>
+            <li><a href="{{ url('/')  }}" class="active"><i class="fa fa-dashboard"></i> Home</a></li>
+            {{--<li class="active">Home</li>--}}
         </ol>
 
 
@@ -38,21 +36,19 @@
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
-                        <a href="{{ route('about') }}">About Us</a>
-                        @endauth
+                        <a href="{{ route('about') }}">About us</a>
+                    @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    <ul>
-                        <li>ID: {{ $task->id }}</li>
-                        <li>Task: {{ $task->body }}</li>
-
-                    </ul>
-
+                    This is the starter page from <a href="http://adminlte.io/">AdminLTE.IO</a>
                 </div>
 
+                <ul class="links">
+                    <li><a href="{{ url('tasks') }}">All Tasks</a></li>
+                </ul>
 
             </div>
         </div>

@@ -1,101 +1,60 @@
-@include('partials.adminLTE_head')
+@extends('layout')
+@section('title') MENA Technologies | Home @endsection
+@section('content')
 
-<!-- include any additional CSS references HERE -->
-</head>
-<!--
-BODY TAG OPTIONS:
-=================
-Apply one or more of the following classes to get the
-desired effect
-|---------------------------------------------------------|
-| SKINS         | skin-blue                               |
-|               | skin-black                              |
-|               | skin-purple                             |
-|               | skin-yellow                             |
-|               | skin-red                                |
-|               | skin-green                              |
-|---------------------------------------------------------|
-|LAYOUT OPTIONS | fixed                                   |
-|               | layout-boxed                            |
-|               | layout-top-nav                          |
-|               | sidebar-collapse                        |
-|               | sidebar-mini                            |
-|---------------------------------------------------------|
--->
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
-
-    <!-- Main Header -->
-    @include('partials.adminLTE_header')
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Hello Shiblie
+            <small>This is the "Home" Page</small>
+        </h1>
 
 
-            <!-- Left side column. contains the logo and sidebar -->
-    @include('partials.adminLTE_leftSideBar')
-            <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>
-                Hello Shiblie
-                <small>This is the "Home" Page</small>
-            </h1>
-
-
-            <!-- Page Mapper -->
-            <ol class="breadcrumb">
-                <li><a href="{{ url('/')  }}" class="active"><i class="fa fa-dashboard"></i> Home</a></li>
-                {{--<li class="active">Home</li>--}}
-            </ol>
+        <!-- Page Mapper -->
+        <ol class="breadcrumb">
+            <li><a href="{{ url('/')  }}" class="active"><i class="fa fa-dashboard"></i> Home</a></li>
+            {{--<li class="active">Home</li>--}}
+        </ol>
 
 
 
 
-        </section>
+    </section>
 
-        <!-- Main content -->
-        <section class="content container-fluid">
+<!-- Main content -->
+<section class="content container-fluid">
 
-            <!--------------------------
-              | Your Page Content Here |
-              -------------------------->
-            <div class="flex-center position-ref full-height">
-                @if (Route::has('login'))
-                    <div class="top-right links">
-                        @auth
-                        <a href="{{ url('/') }}">Home</a>
-                        @else
-                            <a href="{{ route('login') }}">Login</a>
-                            <a href="{{ route('register') }}">Register</a>
-                            <a href="{{ route('about') }}">About us</a>
-                        @endauth
-                    </div>
-                @endif
+    <!--------------------------
+      | Your Page Content Here |
+      -------------------------->
+    <div class="flex-center position-ref full-height">
+        @if (Route::has('login'))
+            <div class="top-right links">
+                @auth
+                <a href="{{ url('/') }}">Home</a>
+                @else
+                    <a href="{{ route('login') }}">Login</a>
+                    <a href="{{ route('register') }}">Register</a>
+                    <a href="{{ route('about') }}">About us</a>
+                    @endauth
+            </div>
+        @endif
 
-                <div class="content">
-                    <div class="title m-b-md">
-                        This is the starter page from <a href="http://adminlte.io/">AdminLTE.IO</a>
-                    </div>
-
-                    <ul class="links">
-                        <li><a href="{{ url('tasks') }}">All Tasks</a></li>
-                    </ul>
-
-                </div>
+        <div class="content">
+            <div class="title m-b-md">
+                This is the starter page from <a href="http://adminlte.io/">AdminLTE.IO</a>
             </div>
 
+            <ul class="links">
+                <li><a href="{{ url('tasks') }}">All Tasks</a></li>
+            </ul>
 
-
-        </section>
-        <!-- /.content -->
+        </div>
     </div>
-    <!-- /.content-wrapper -->
 
-    <!-- Main Footer -->
-    @include('partials.adminLTE_footer')
 
-            <!-- Control Sidebar -->
-    @include('partials.adminLTE_rightSideBar')
-</div>
-<!-- ./wrapper -->
 
-@include('partials.adminLTE_foot')
+</section>
+@endsection
