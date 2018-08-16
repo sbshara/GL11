@@ -11,35 +11,35 @@
 |
 */
 
-use App\Task;
-
+/*
+ * =========================================
+ *                   HOME
+ * =========================================
+ */
 Route::get('/', function () {
     return view('staticPages.starter');
 });
+// =============== END HOME ===============
 
+/*
+ * =========================================
+ *               STATIC PAGES
+ * =========================================
+ */
 Route::get('/about', function () {
     return view('staticPages.about');
 });
 
+// =============== END Static Pages ===============
 
-
-
-// All Tasks
-Route::get('/tasks', function () {
-
-//    $tasks = DB::table('tasks')->get();
-    $tasks = Task::all();
-
-
-    return view('tasks.tasks', compact('tasks'));
-});
-
-// Task by ID
-Route::get('/tasks/{task}', function ($id) {
-//    $task = DB::table('tasks')->find($id);
-    $task = Task::find($id);
-    return view('tasks.task', compact('task'));
-});
+/*
+ * =========================================
+ *                   TASKS
+ * =========================================
+ */
+Route::get('/tasks', 'TasksController@index');
+Route::get('/tasks/{task}', 'TasksController@show');
+// =============== END TASKS ===============
 
 
 
