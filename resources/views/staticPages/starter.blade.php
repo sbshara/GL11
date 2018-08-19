@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title') MENA Technologies | Home @endsection
+@section('title') Home | MENA Technologies @endsection
 @section('content')
 
 <!-- Content Wrapper. Contains page content -->
@@ -49,12 +49,11 @@
 
             <ul class="links">
                 <li><a href="{{ url('tasks') }}">All Tasks</a></li>
+                <li><a href="{{ url('posts') }}">All Posts</a></li>
             </ul>
 
         </div>
     </div>
-
-
 
 </section>
 @endsection

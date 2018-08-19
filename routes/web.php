@@ -30,6 +30,14 @@ Route::get('/about', function () {
     return view('staticPages.about');
 });
 
+Route::get('/login', function () {
+    return view('auth.login');
+});
+
+//Route::post('/login', function () {
+//
+//});
+
 // =============== END Static Pages ===============
 
 /*
@@ -47,10 +55,20 @@ Route::get('/tasks/{task}', 'TasksController@show');
 // =============== END TASKS ===============
 
 
+/*
+* =========================================
+*                   Posts
+* =========================================
+ */
+Route::get('/posts', 'PostsController@index');
+Route::get('/posts/create/', 'PostsController@create');
+Route::get('/posts/{post}', 'PostsController@show');
+Route::post('/posts', 'PostsController@store');
+//Route::get('/{post}/edit', 'PostsController@edit');
+//Route::get('/{post}/edit', 'PostsController@update');
+//Route::get('/{post}/edit', 'PostsController@destroy');
 
-
-
-
+// =============== END TASKS ===============
 
 
 

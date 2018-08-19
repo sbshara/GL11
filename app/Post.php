@@ -2,9 +2,12 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
 class Post extends Model
 {
-    //
+    // Fields we accept
+    protected $fillable = ['title', 'body'];
+
+
+
+
 }
