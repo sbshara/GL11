@@ -1,0 +1,14 @@
+language: php
+
+php:
+  - 7.1
+
+before_script:
+  - cp .env.travis .env
+  - mysql -e 'create database guidelines;'
+  - composer self-update
+  - composer install --no-interaction
+
+script:
+  - vendor/bin/phpunit
+
