@@ -23,7 +23,8 @@
         "fideloper/proxy": "^4.0",
         "ircmaxell/random-lib": "*",
         "laravel/framework": "5.6.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "orangehill/iseed": "^2.5"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
