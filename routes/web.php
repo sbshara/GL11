@@ -84,3 +84,10 @@ Route::post('/posts', 'PostsController@store');
 Route::get('/laravel', function () {
     return view('welcome');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
