@@ -54,7 +54,7 @@ desired effect
     <footer class="main-footer">
         <!-- To the right -->
         <div class="pull-right hidden-xs">
-            Version 1.0
+            Version 1.0.1 --dev
         </div>
         <!-- Default to the left -->
         <strong>Copyright &copy; {{ now()->year }} <a href="#">MENA Technologies, Inc.</a></strong> All rights reserved.
@@ -69,5 +69,5 @@ desired effect
 </div>
 <!-- ./wrapper -->
 
-        @yield('additional_JS')
+@yield('additional_JS')
 @include('AdminLTE.foot')

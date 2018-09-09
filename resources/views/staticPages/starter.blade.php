@@ -1,14 +1,15 @@
 @extends('layout')
-@section('title') Home | MENA Technologies @endsection
-@section('content')
+@section('title')Starter | MENA Technologies @endsection
 
+
+@section('content')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Hello Shiblie
-            <small>This is the "Home" Page</small>
+            Hello { USER }
+            <small>This is the "Home" Page (starter.blade.php)</small>
         </h1>
 
 
@@ -17,9 +18,6 @@
             <li><a href="{{ url('/')  }}" class="active"><i class="fa fa-dashboard"></i> Home</a></li>
             {{--<li class="active">Home</li>--}}
         </ol>
-
-
-
 
     </section>
 
@@ -33,11 +31,11 @@
         @if (Route::has('login'))
             <div class="top-right links">
                 @auth
-                <a href="{{ url('/') }}">Home</a>
+                <a href="{{ route('home') }}">{{ __('Home') }}</a>
                 @else
-                    <a href="{{ route('login') }}">Login</a>
-                    <a href="{{ route('register') }}">Register</a>
-                    <a href="{{ route('about') }}">About us</a>
+                    <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                    <a href="{{ route('about') }}">{{ __('About') }}</a>
                     @endauth
             </div>
         @endif

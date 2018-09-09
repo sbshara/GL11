@@ -17,6 +17,13 @@
 <!-- Bootstrap 3.3.7 -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<!-- FONT AWESOME 5.3.1 -->
+{{--<script defer --}}
+        {{--src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"--}}
+        {{--integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB"--}}
+        {{--crossorigin="anonymous">--}}
+{{--</script>--}}
+
 {{--<!-- Morris.js charts 2.2.7 & 0.5.1 -->--}}
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>--}}
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>--}}
