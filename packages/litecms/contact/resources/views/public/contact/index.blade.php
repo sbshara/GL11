@@ -104,22 +104,30 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                {!!Form::text('name')->placeholder('Name')->raw()!!}
+                                {!!Form::text('name')
+                                ->placeholder('Name')
+                                ->raw()!!}
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                {!!Form::email('email')->placeholder('Email')->raw()!!}
+                                {!!Form::email('email')
+                                ->placeholder('Email')
+                                ->raw()!!}
                                 </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-group">
-                                {!!Form::text('phone')->placeholder('Phone')->raw()!!}
+                                {!!Form::text('phone')
+                                ->placeholder('Phone')
+                                ->raw()!!}
                               </div>
                             </div>
                             <div class="col-md-12 mb20">
                               <div class="form-group">
-                              {!!Form::textarea('message')->placeholder('Message')->rows(6)->raw()!!}
+                              {!!Form::textarea('message')
+                              ->placeholder('Message')->rows(6)
+                              ->raw()!!}
                               </div>
 
                             </div>
