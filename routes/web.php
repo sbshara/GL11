@@ -28,7 +28,7 @@ Route::get('/', function () {
  */
 Route::get('/about', function () {
     return view('staticPages.about');
-});
+})->name('about');
 
 Route::get('/login', function () {
     return view('auth.login');
