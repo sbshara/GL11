@@ -10,4 +10,14 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    /**
+     * @var store response object
+     */
+    public $response;
+
+    /**
+     * @var store repository object
+     */
+    public $repository;
+
 }

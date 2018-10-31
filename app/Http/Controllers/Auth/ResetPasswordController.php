@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ResetsPasswords;
+use Litepie\User\Traits\RoutesAndGuards;
+use Litepie\Theme\ThemeAndViews;
+use Litepie\User\Traits\Auth\ResetsPasswords;
+use App\Http\Response\Auth\Response as AuthResponse;
 
 class ResetPasswordController extends Controller
 {
@@ -16,16 +19,8 @@ class ResetPasswordController extends Controller
     | and uses a simple trait to include this behavior. You're free to
     | explore this trait and override any methods you wish to tweak.
     |
-    */
-
-    use ResetsPasswords;
-
-    /**
-     * Where to redirect users after resetting their password.
-     *
-     * @var string
      */
-    protected $redirectTo = '/home';
+    use RoutesAndGuards, ThemeAndViews, ResetsPasswords;
 
     /**
      * Create a new controller instance.
@@ -34,6 +29,9 @@ class ResetPasswordController extends Controller
      */
     public function __construct()
     {
+        $this->response   = resolve(AuthResponse::class);
+        $this->setRedirectTo();
+        $this->setTheme(null, 'auth');
         $this->middleware('guest');
     }
 }

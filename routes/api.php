@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth.basic:web')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::middleware('auth.basic:client.web')->get('/client', function (Request $request) {
+    return $request->user('client.web');
 });
